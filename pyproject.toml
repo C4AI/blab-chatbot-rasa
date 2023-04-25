@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "blab-chatbot-rasa"
+version = "0.1.0"
+description = ""
+authors = ["C4AI"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+blab-chatbot-bot-client = { extras = ["ws"], git = "https://github.com/C4AI/blab-chatbot-bot-client.git", branch = "main" }
+requests = "^2.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+darglint = "*"
+flake8 = "*"
+flake8-annotations = "*"
+flake8-docstrings = "*"
+flake8-bugbear = "*"
+python-lsp-server = { extras = ["all"], version = "*" }
+pyupgrade = "*"
+mypy = "^1.2.0"
+pre-commit = "^2.18.1"
+black = "^22.3.0"
+ruff = "^0.0.261"
+types-requests = "^2.28.11.17"
+
+
+
+
+
+[tool.ruff]
+select = ["F", "E", "W", "C90", "I", "N", "D", "UP", "YTT", "ANN", "S", "BLE", "B", "A", "C4", "T10", "DJ", "EM", "EXE", "ISC", "ICN", "ISC002", "ISC003", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PD", "PGH", "PL", "TRY", "NPY", "RUF"]
+ignore = ["ANN002", "ANN003", "ANN1", "ANN204", "ANN401", "ARG002", "A003", "D105", "D106", "D203", "D213", "D417", "DTZ", "I001", "TRY00"]
+
+[tool.ruff.pydocstyle]
+ignore-decorators = ["overrides.overrides"]
