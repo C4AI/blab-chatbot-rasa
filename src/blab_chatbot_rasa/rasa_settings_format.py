@@ -1,6 +1,6 @@
 """A module that defines the expected format of the configuration file.
 
-See the file `settings_watson_TEMPLATE.py` for a template.
+See the file `settings_rasa_TEMPLATE.py` for a template.
 """
 
 from typing import Protocol, TypedDict, runtime_checkable

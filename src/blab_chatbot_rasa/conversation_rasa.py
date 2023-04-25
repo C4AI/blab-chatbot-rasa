@@ -1,4 +1,4 @@
-"""A module that interacts with the APIs of Watson Assistant and BLAB Controller."""
+"""A module that interacts with the APIs of Rasa and BLAB Controller."""
 from typing import Any
 
 import requests
@@ -18,7 +18,7 @@ from blab_chatbot_rasa.rasa_settings_format import BlabRasaClientSettings
 class RasaWebSocketBotClientConversation(
     WebSocketBotClientConversation[BlabRasaClientSettings]
 ):
-    """Performs the communication between Watson Assistant and BLAB Controller."""
+    """Performs the communication between Rasa and BLAB Controller."""
 
     def send_message_to_rasa(self, text: str) -> list[dict[str, Any]]:
         """Send a text message to the Rasa bot (on behalf of the user).

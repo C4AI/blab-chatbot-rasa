@@ -1,4 +1,4 @@
-"""A module that contains settings for Watson bot client."""
+"""A module that contains settings for the integration of Rasa and BLAB."""
 
 from blab_chatbot_bot_client.settings_format import BlabWebSocketConnectionSettings
 
