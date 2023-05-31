@@ -13,7 +13,7 @@ class RasaSettings(TypedDict):
 
     ADDRESS: str
     """Rasa bot address. The port should be specified after a colon.
-       Example: `http://localhost:5005/webhooks/rest/webhook`.
+       Example: ``http://localhost:5005/webhooks/rest/webhook``.
     """
 
 
@@ -21,10 +21,9 @@ class RasaSettings(TypedDict):
 class BlabRasaClientSettings(BlabWebSocketBotClientSettings, Protocol):
     """A protocol that should be implemented by the configuration file.
 
-    It extends the parent protocol (`BlabBotClientSettings`)
-    with the inclusion of the `RASA_SETTINGS` field.
+    It extends the parent protocol (``BlabBotClientSettings``)
+    with the inclusion of the ``RASA_SETTINGS`` field.
     """
 
     RASA_SETTINGS: RasaSettings
-
-    DEV_ENVIRONMENT: bool
+    """Rasa-specific settings"""
